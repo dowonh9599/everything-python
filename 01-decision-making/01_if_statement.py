@@ -117,6 +117,14 @@ else:
   print(rand_num, "is a number between 20 and 50")
 
 # HW (due May 10th, 2023): 
-# 1. get user's birthday through keyboard input
-# 2. tell their age as of now,
+# 1. get user's birthday through keyboard input (1995,9,9)
+# 2. tell their age as of now, (use year to find the age)
+# - get today's date? google it.
+# - reference: https://www.programiz.com/python-programming/datetime/current-datetime#:~:text=Get%20the%20current%20date%20and,class%20of%20the%20datetime%20module.&text=Here%2C%20we%20have%20used%20datetime,and%20time%20in%20another%20format.
 # 3. tell their zodiac sign
+# - reference: https://www.allure.com/story/zodiac-sign-personality-traits-dates
+# - example: Aries (March 21 – April 19)
+# - if (month is larger than or equal to 3 and day is larger than or equal to 21)
+#       AND
+#      (month is less than or equal to 4 and day is less than or equal to 19)
+# - repeat for all other signs
