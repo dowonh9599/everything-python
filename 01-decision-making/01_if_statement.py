@@ -119,26 +119,31 @@
 # HW (due May 10th, 2023): 
 # 1. get user's birthday through keyboard input (1995,9,9)
 birthdate = input("Enter Birthdate:(DD/MM/YYYY)")
-day = birthdate.slice() # 0th character & 1st character = day
-month = birthdate.slice() # 0th character & 1st character = day
-year = birthdate.slice() # 0th character & 1st character = day
+day = birthdate[0:2] # 0th character & 1st character = day
+month = birthdate[3:5] # 3th character & 4st character = month
+year = birthdate[6:11] # 6th character ~ 10st character = year
+
+print('string format', day, month, year) # '09' '09' '1995', we must convert to integer
+
+day = int(birthdate[0:2]) # 0th character & 1st character = day
+month = int(birthdate[3:5]) # 3th character & 4st character = month
+year = int(birthdate[6:11]) # 6th character ~ 10st character = year
+
+print('integer format', day, month, year) # 9 9 1995
 
 # 2. tell their age as of now, (use year to find the age)
 # - get today's date? google it.
 # - reference: https://www.programiz.com/python-programming/datetime/current-datetime#:~:text=Get%20the%20current%20date%20and,class%20of%20the%20datetime%20module.&text=Here%2C%20we%20have%20used%20datetime,and%20time%20in%20another%20format.
 
-from datetime import datetime
-from datetime import date
-birth_date = date(1980, 5, 26)
-print(birth_date)
-years = birth_date.year
-print("This person born in", years)
-if (datetime.now() - birth_date.replace(year=datetime.now().year)).days >= 0:
-    age = years
-else:
-    age = years - 1
+# - logic to find the age
+# if birth_date is before today's date, age = today's year - year of birth - 1
+# else age = today's year - year of birth
+# how to compare two dates?
+# reference: https://www.geeksforgeeks.org/comparing-dates-python/
 
-print(age)
+from datetime import date
+birth_date = date(year, month, day)
+print("input birth date", birth_date)
 
 # 3. tell their zodiac sign
 # - reference: https://www.allure.com/story/zodiac-sign-personality-traits-dates
