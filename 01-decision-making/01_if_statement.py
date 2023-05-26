@@ -118,7 +118,10 @@
 
 # HW (due May 10th, 2023): 
 # 1. get user's birthday through keyboard input (1995,9,9)
-birthdate = input("Enter Birthdate:")
+birthdate = input("Enter Birthdate:(DD/MM/YYYY)")
+day = birthdate.slice() # 0th character & 1st character = day
+month = birthdate.slice() # 0th character & 1st character = day
+year = birthdate.slice() # 0th character & 1st character = day
 
 # 2. tell their age as of now, (use year to find the age)
 # - get today's date? google it.
