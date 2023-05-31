@@ -156,40 +156,40 @@ print('integer format', day, month, year) # 9 9 1995
 
 
 if month == 12:
-    sign = 'Sagittarius' if (day < 22) else 'Capricorn'
+  sign = 'Sagittarius'if (day < 22) else 'Capricorn'
           
 elif month == 1:
-    sign = 'Capricorn' if (day < 20) else 'Aquarius'
+  sign = 'Capricorn' if (day < 20) else 'Aquarius'
           
 elif month == 2:
-    sign = 'Aquarius' if (day < 19) else 'Pisces'
+  sign = 'Aquarius' if (day < 19) else 'Pisces'
           
 elif month == 3:
-        sign = 'Pisces' if (day < 21) else 'Aries'
+  sign = 'Pisces' if (day < 21) else 'Aries'
           
 elif month == 4:
-        sign = 'Aries' if (day < 20) else 'Taurus'
+  sign = 'Aries' if (day < 20) else 'Taurus'
           
 elif month == 5:
-        sign = 'Taurus' if (day < 21) else 'Gemini'
+  sign = 'Taurus' if (day < 21) else 'Gemini'
           
 elif month == 6:
-        sign = 'Gemini' if (day < 21) else 'Cancer'
+  sign = 'Gemini' if (day < 21) else 'Cancer'
           
 elif month == 7:
-        sign = 'Cancer' if (day < 23) else 'Leo'
+  sign = 'Cancer' if (day < 23) else 'Leo'
           
 elif month == 8:
-        sign = 'Leo' if (day < 23) else 'Virgo'
+  sign = 'Leo' if (day < 23) else 'Virgo'
           
 elif month == 9:
-        sign = 'Virgo' if (day < 23) else 'Libra'
+  sign = 'Virgo' if (day < 23) else 'Libra'
       
 elif month == 10:
-        sign = 'Libra' if (day < 23) else 'Scorpio'
+  sign = 'Libra' if (day < 23) else 'Scorpio'
           
 elif month == 11:
-        sign ='scorpio' if (day < 22) else 'Sagittarius'
+  sign ='scorpio' if (day < 22) else 'Sagittarius'
           
 print(sign)
 
