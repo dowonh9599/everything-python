@@ -141,9 +141,9 @@ print('integer format', day, month, year) # 9 9 1995
 # how to compare two dates?
 # reference: https://www.geeksforgeeks.org/comparing-dates-python/
 
-from datetime import date
-birth_date = date(year, month, day)
-print("input birth date", birth_date)
+# from datetime import date
+# birth_date = date(day,month,year)
+# print("input birth date", birth_date) 
 
 # 3. tell their zodiac sign
 # - reference: https://www.allure.com/story/zodiac-sign-personality-traits-dates
@@ -151,3 +151,45 @@ print("input birth date", birth_date)
 # - if (month is larger than or equal to 3 and day is larger than or equal to 21)
 #       AND
 #      (month is less than or equal to 4 and day is less than or equal to 19)
+
+
+
+
+if month == 12:
+    sign = 'Sagittarius' if (day < 22) else 'Capricorn'
+          
+elif month == 1:
+    sign = 'Capricorn' if (day < 20) else 'Aquarius'
+          
+elif month == 2:
+    sign = 'Aquarius' if (day < 19) else 'Pisces'
+          
+elif month == 3:
+        sign = 'Pisces' if (day < 21) else 'Aries'
+          
+elif month == 4:
+        sign = 'Aries' if (day < 20) else 'Taurus'
+          
+elif month == 5:
+        sign = 'Taurus' if (day < 21) else 'Gemini'
+          
+elif month == 6:
+        sign = 'Gemini' if (day < 21) else 'Cancer'
+          
+elif month == 7:
+        sign = 'Cancer' if (day < 23) else 'Leo'
+          
+elif month == 8:
+        sign = 'Leo' if (day < 23) else 'Virgo'
+          
+elif month == 9:
+        sign = 'Virgo' if (day < 23) else 'Libra'
+      
+elif month == 10:
+        sign = 'Libra' if (day < 23) else 'Scorpio'
+          
+elif month == 11:
+        sign ='scorpio' if (day < 22) else 'Sagittarius'
+          
+print(sign)
+
