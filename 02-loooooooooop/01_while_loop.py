@@ -105,35 +105,70 @@
 #  ***
 #   *
 
-num_space = 2
-num_star = 1
-count = 1
+# num_space = 2
+# num_star = 1
+# count = 1
 
 
-while count <= 5:
-    print(' '*num_space+'*'*num_star)
-    if count <= 2:
-        num_space -= 1
-        num_star += 2
-    else:
-        num_space += 1
-        num_star -= 2
-    count += 1
+# while count <= 5:
+#     print(*num_space+'*'*num_star)
+#     if count <= 2:
+#         num_space -= 1
+#         num_star += 2
+#     else:
+#         num_space += 1
+#         num_star -= 2
+#     count += 1
 
-# Q3
+# # Q3
 # *******
 #  *****
 #   ***
-#    *
+# #    *
 
-# Q4
+# num_space = 0
+# num_star = 7
+# count = 1
+
+# while count <= 4:
+#     print(*num_space+'*'*num_star)
+#     if count <= 4:
+        
+#         num_space += 1
+#         num_star -= 2
+#     else: 
+#         num_star += 1
+        
+#     count += 1
+
+# Q4 
 # 1234567
 #  12345
-#   123
+#   123 
 #    1
+
+
+print("Q4")
+layers = 4
+n = 7
+spaces = 0
+while layers > 0:
+    digit = 1
+    print((" " * (spaces // 2)), end="")
+    while digit <= n:
+        print(digit, end="")
+        digit += 1
+    print((" " * (spaces // 2)), end="")  # finished drawing one layer, what's next?
+    # 1. skip a line, reduce n by 2, increase space by 2, reduce layer by 1
+    print()
+    n -= 2
+    spaces += 2
+    layers -= 1
+
 
 # Q5
 # *@*@*@*
 #  *@*@*
 #   *@*
 #    *
+
