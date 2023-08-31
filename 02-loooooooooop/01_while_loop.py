@@ -41,7 +41,7 @@
 # # 	age += 1
 # # else:
 # # 	print("You reached age",age,",Let's get your first Soju!")
-	
+
 # # # .... Until When?
 # # print ("Blah Blah Blah...")
 
@@ -51,13 +51,13 @@
 # # 	age += 1
 # # else:
 # # 	print("You reached age",age,",Let's get your first Soju!")
-	
+
 # # if age < 18: # age = 18
 # # 	print("You Cannot Drink Alcohol at age:", age)
 # # 	age += 1
 # # else:
 # # 	print("You reached age",age,",Let's get your first Soju!")
-	
+
 # # Problem is that it is very tedious job to copy the same if statement 10 times. We must wrap redundant codes into loops.
 
 # ## while loop executes the body until the associated boolean statement returns True
@@ -65,7 +65,7 @@
 # while (age < 18): # while age is less than 18,
 # 	print("You Cannot Drink Alcohol at age:", age)
 # 	age += 1
-	
+
 # # ...computer exits the while loop when age is NOT less than 18, starts reading here
 # print("You reached age",age,",Let's get your first Soju!")
 
@@ -96,7 +96,7 @@
 # while numStar <= 4:
 # 	print("*"*numStar)
 # 	numStar += 1 # for every print of stars, add 1, since for every row, the number of star increases by 1
-	
+
 # HW: print those shapes below:
 # Q2
 #   *
@@ -133,18 +133,18 @@
 # while count <= 4:
 #     print(*num_space+'*'*num_star)
 #     if count <= 4:
-        
+
 #         num_space += 1
 #         num_star -= 2
-#     else: 
+#     else:
 #         num_star += 1
-        
+
 #     count += 1
 
-# Q4 
+# Q4
 # 1234567
 #  12345
-#   123 
+#   123
 #    1
 
 
