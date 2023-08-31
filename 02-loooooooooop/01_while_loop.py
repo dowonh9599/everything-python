@@ -167,8 +167,22 @@ while layers > 0:
 
 
 # Q5
-# *@*@*@*
-#  *@*@*
-#   *@*
-#    *
+# *@*@*@*   - 7 symbols, odd = *, even = @
+#  *@*@*    - 5 symbols, same pattern
+#   *@*     - 3 symbols, same pattern
+#    *      - 1 symbol, same pattern
 
+layer = 4
+num_symbols = 7
+i = 1
+while layer > 0:
+    while i <= num_symbols:  # 1 ~ ? (7,5,3,1)
+        if i % 2 == 0:  # if i is even:
+            print("@", end="")
+        else:
+            print("*", end="")
+        i += 1  # increment the i
+    num_symbols -= 2  # so that in the next layer, num_symbol is 2 less
+    layer -= 1  # add one to layer
+    i = 1  # initialize the i, so that in the next layer, i start from 1 again.
+    print()  # skip a line
