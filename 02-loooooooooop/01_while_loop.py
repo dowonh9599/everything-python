@@ -172,17 +172,29 @@ while layers > 0:
 #   *@*     - 3 symbols, same pattern
 #    *      - 1 symbol, same pattern
 
+# you can instead try this, and replace 0 with " "
+# *@*@*@*   - 7 symbols, odd = *, even = @
+# 0*@*@*0   - 5 symbols, same pattern
+# 00*@*00   - 3 symbols, same pattern
+# 000*000   - 1 symbol, same pattern
+print("\nQ5")
 layer = 4
 num_symbols = 7
+spaces = 0
 i = 1
 while layer > 0:
+    print(" " * (spaces//2) , end="")
     while i <= num_symbols:  # 1 ~ ? (7,5,3,1)
         if i % 2 == 0:  # if i is even:
             print("@", end="")
+            
         else:
             print("*", end="")
+        
         i += 1  # increment the i
     num_symbols -= 2  # so that in the next layer, num_symbol is 2 less
+    spaces += 2
     layer -= 1  # add one to layer
     i = 1  # initialize the i, so that in the next layer, i start from 1 again.
     print()  # skip a line
+
