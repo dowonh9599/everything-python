@@ -83,6 +83,22 @@ while i < len(L1):
     i += 1  # i increases from 0 to len(L1)(= 6)
 
 # Q1: print "ace" using while loop (MUST!)
+i = 0
+while i < len(L1):
+    print(L1[i], end="")
+    i += 2
+print()
 # Q2: print "bdf" using while loop (MUST!)
+i = 1
+while i < len(L1):
+    print(L1[i], end="")
+    i += 2
+print()
 # Q3: print "fedcba" using while loop (MUST!)
+i = 5
+while i < len(L1) and i >= 0:
+    print(L1[i], end="")
+    i -= 1
+print()
+    
 # Q4: print "afbecd" using while loop (MUST!)
