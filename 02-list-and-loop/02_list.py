@@ -58,9 +58,7 @@ num_multiple_of_10_v4.insert(3, 120)  # insert 120 at index=3 (4th)
 print("inserted 120 at index = 3 (4th)", num_multiple_of_10_v4)
 
 num_multiple_of_10_v4 = [40, 20, 50, 10, 80, 60, 30]
-last_item1 = num_multiple_of_10_v4[
-    len(num_multiple_of_10_v4) - 1
-]  # get last item method 1
+last_item1 = num_multiple_of_10_v4[len(num_multiple_of_10_v4) - 1]  # get last item method 1
 last_item2 = num_multiple_of_10_v4[-1]  # like walking the list backward (smarter way)
 print(
     "The two variables, last_item1 and last_item2 must be the same",
