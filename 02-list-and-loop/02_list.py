@@ -102,3 +102,32 @@ while i < len(L1) and i >= 0:
 print()
     
 # Q4: print "afbecd" using while loop (MUST!)
+# Solution 1: Good, but not robust (not always true depending on the length of L1)
+L1 = ["a", "b", "c", "d", "e", "f"]
+
+i = 0
+j = -1
+while i < 3 and j > -4:
+    print(L1[i] + L1[j], end="")
+    i += 1
+    j -= 1
+print()
+
+# Solution 2: more "robust" (so-called good boiler plate, reusable in many cases)
+L1 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+
+i = 0 # always return the first element
+j = -1 # always return last element
+# plan:
+# first loop: "af" i = 0, j = -1
+# second loop: "be" i = 1, j = -2
+# third loop: "cd" i = 2, j = -3
+
+# total repeat needed: 3
+# since total number of elements in the L1 is 6, you can just let the loop to go "half-way", but i goes forward, and j goes backward
+repeat = 0
+while repeat < len(L1)/2:
+    print(L1[i] + L1[j], end="")
+    i += 1
+    j -= 1
+    repeat += 1
