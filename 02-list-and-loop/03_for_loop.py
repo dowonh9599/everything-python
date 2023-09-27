@@ -84,16 +84,17 @@ for i in range(10):
 # Write a 
 
 def is_prime(num) -> bool:
+  print("input:",num)
 	# ===YOUR CODE FROM HERE===
-  print("input:",num) # this 
+
   # ===TO HERE===
   pass
 
-is_prime(10) # should return False
-is_prime(13) # should return True
-is_prime(37234782378622) # should return True
-is_prime(2971215073) # should return True
-is_prime(104857601) # should return True
-is_prime(982451653) # should return True
-is_prime(32416190071) # should return True
-is_prime(32416190075) # should return False
+print("10 is a prime number:", is_prime(10)) # should return False
+print("13 is a prime number:", is_prime(13)) # should return True
+print("37234782378622 is a prime number:",is_prime(37234782378622)) # should return True
+print("2971215073 is a prime number:",is_prime(2971215073)) # should return True
+print("104857601 is a prime number:",is_prime(104857601)) # should return True
+print("982451653 is a prime number:",is_prime(982451653)) # should return True
+print("32416190071 is a prime number:",is_prime(32416190071)) # should return True
+print("32416190075 is a prime number:",is_prime(32416190075)) # should return False
