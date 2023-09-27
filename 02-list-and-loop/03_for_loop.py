@@ -81,3 +81,19 @@ for i in range(10):
 	print(i, end=" ")
 
 # Loop control practice
+# Write a 
+
+def is_prime(num) -> bool:
+	# ===YOUR CODE FROM HERE===
+  print("input:",num) # this 
+  # ===TO HERE===
+  pass
+
+is_prime(10) # should return False
+is_prime(13) # should return True
+is_prime(37234782378622) # should return True
+is_prime(2971215073) # should return True
+is_prime(104857601) # should return True
+is_prime(982451653) # should return True
+is_prime(32416190071) # should return True
+is_prime(32416190075) # should return False
