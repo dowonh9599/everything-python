@@ -42,11 +42,16 @@ for i in range(len(item_list)): # = for i in range(6) = for i in (0,1,2,3,4,5)
 
 # Quick Practice 1: Fibonacci Sequence
 # using for loop, and range function, print: 0 1 4 9 16 25 36 49 64 81
-
+for i in range(10):
+	print (i ** 2,end=" ")
+print()
 
 # Quick Practice 2: Find cumulative sum
 num_list = [1,9,6,20,12,40,32,41] # cumulative sum = 161
 # using for loop, but not using range function, print the cumulative sum of num_list
 
+sum = 0
 
-
+for i in num_list:
+	sum += i
+print(sum)
