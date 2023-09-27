@@ -65,9 +65,19 @@ for i in range(10):
 	print(i, end=" ")
 print()
 
-# 3.4.1 continue statement
+# 3.4.2 continue statement
 print("continue statement usage:")
 for i in range(10):
 	if i == 6:
 		continue # do not run code below this, resume from next iteration
 	print(i, end=" ")
+print()
+
+# 3.4.3 pass statement
+print("pass statement usage:")
+for i in range(10):
+	if i == 6:
+		pass # do nothing
+	print(i, end=" ")
+
+# Loop control practice
