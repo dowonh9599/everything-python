@@ -55,3 +55,19 @@ sum = 0
 for i in num_list:
 	sum += i
 print(sum)
+
+# 3.4 Loop Control
+# 3.4.1 break statement
+print("break statement usage:")
+for i in range(10):
+	if i == 6:
+		break # complete stop here
+	print(i, end=" ")
+print()
+
+# 3.4.1 continue statement
+print("continue statement usage:")
+for i in range(10):
+	if i == 6:
+		continue # do not run code below this, resume from next iteration
+	print(i, end=" ")
