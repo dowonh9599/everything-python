@@ -81,20 +81,38 @@ for i in range(10):
 	print(i, end=" ")
 
 # Loop control practice
-# Write a 
+# Write a prime number detector function
+# What is prime number?
+# - divisble by 1 and itself only
 
-def is_prime(num) -> bool:
-  print("input:",num)
-	# ===YOUR CODE FROM HERE===
+# Big Hint: when determining prime number, "no need to test further" if there's at least 1 number that results in num % i == 0
+# e.g. if num = 10, while testing i = [2,9], "no need to test [6,9]"" since at i = 5, 10 % 5 = 0, meaning we already know 10 is not a prime number since it is divisible by 5.
+# by saying "no need to test", it is implies "break" statement must be used to stop the loop.
+def is_prime(num: int) -> bool:
+	is_prime_num = False
+	print("input:",num)
 
-  # ===TO HERE===
-  pass
+	if num < 2:
+		pass
+	
+	for i in range(2, num): # this way, you can prevent the num itself being tested since range excludes "num" itself
+		# e.g. num = 10, then num is tested with i = [2,9]
+		# the last test will be 10%9 = 1
+		# this way, no matter what number is passed to num, it will always end up with (n) % (n-1) = 1 -> and is_prime_num is overriden to True.
+		if num % i == 0:
+				is_prime_num = False
+		else:
+				is_prime_num = True
+
+	# ===TO HERE===
+	return is_prime_num
 
 print("10 is a prime number:", is_prime(10)) # should return False
 print("13 is a prime number:", is_prime(13)) # should return True
-print("37234782378622 is a prime number:",is_prime(37234782378622)) # should return True
-print("2971215073 is a prime number:",is_prime(2971215073)) # should return True
-print("104857601 is a prime number:",is_prime(104857601)) # should return True
-print("982451653 is a prime number:",is_prime(982451653)) # should return True
-print("32416190071 is a prime number:",is_prime(32416190071)) # should return True
-print("32416190075 is a prime number:",is_prime(32416190075)) # should return False
+print("20000 is a prime number:", is_prime(20000)) # should return False
+print("59595 is a prime number:", is_prime(59595)) # should return False
+print("10091 is a prime number:",is_prime(10091)) # should return True
+print("24799 is a prime number:",is_prime(24799)) # should return True
+print("68927 is a prime number:",is_prime(68927)) # should return True
+print("92479 is a prime number:",is_prime(92479)) # should return True
+print("92479 is a prime number:",is_prime(92450)) # should return True
