@@ -101,6 +101,7 @@ def is_prime(num: int) -> bool:
 		# this way, no matter what number is passed to num, it will always end up with (n) % (n-1) = 1 -> and is_prime_num is overriden to True.
 		if num % i == 0:
 				is_prime_num = False
+				break
 		else:
 				is_prime_num = True
 
