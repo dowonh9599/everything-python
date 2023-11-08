@@ -32,6 +32,9 @@ print("iteraing tuples", T3 * 5)
 print(T2[1])  # 2nd item in T2 tuple, i.e. banana
 print("slicing Tuple", T4[1:3])
 
+# casting
+T_in_L = list(T2)
+
 # TypeError: 'tuple' object does not support item assignment
 T["Hello"] = "world!"
 print(T)
