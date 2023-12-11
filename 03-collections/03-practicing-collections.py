@@ -29,7 +29,19 @@ print("reversing the order of L1", L1.reverse())
 - Print all keys.
 - Print all values.
 """
-# YOUR CODE FOR Q2 HERE
+
+dictionary = {
+    "a": "1",
+    "b": "2",
+    "c": "3"
+}
+dictionary["d"] = "4"
+dictionary["b"] = "5"
+del dictionary["c"]
+if "a" in dictionary:
+    print("yes")
+print("all values in dictionary", dictionary.values())
+print("all keys in dictionary", dictionary.keys())
 
 """
 3. Tuple Operations: Create a tuple of 4 elements and perform the following operations:
@@ -38,8 +50,11 @@ print("reversing the order of L1", L1.reverse())
 - Add an element to the list.
 - Convert the list back to a tuple.
 """
-# YOUR CODE FOR Q3 HERE
-
+T1 = (1, 2, 3, 4)
+L1= list(T1)
+L1.append(5)
+T1 = tuple(L1)
+print(T1)
 """
 4. List to Dictionary: Create a list of tuples, where each tuple contains a key and a value. Convert this list of tuples into a dictionary.
 """
