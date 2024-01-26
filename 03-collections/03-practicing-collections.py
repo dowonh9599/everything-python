@@ -55,38 +55,74 @@ print(T1)
 4. List to Dictionary: Create a list of tuples, where each tuple contains a key and a value. Convert this list of tuples into a dictionary.
 """
 # YOUR CODE FOR Q4 HERE
+print("4. list of tuple to dict")
+tuple_list = [("a", 1), ("b", 2), ("c", 3)]
+tuple_list_to_dict = dict(tuple_list)  # converting list of tuples to dict
+print("convert result:", tuple_list_to_dict)
+print("test, should print 2:", tuple_list_to_dict["b"])
 
 """
 5. Dictionary to List: Create a dictionary and convert it into a list of tuples, where each tuple is a key-value pair from the dictionary.
 """
 # YOUR CODE FOR Q5 HERE
+print("5. dict to list of tuple")
+dictionary = {"a": "1", "b": "2", "c": "3"}
+print(".items()", dictionary.items())
+dict_to_tuple = list(dictionary.items())
+print("convert result", dict_to_tuple)
 
 """
 6. Nested Data Structures: Create a list of dictionaries. Each dictionary should contain a product and its price. Find the product with the highest price.
 """
 # YOUR CODE FOR Q6 HERE
+print("6. finding max in the list of dictionary")
+groceries = [
+    {"product": "apple", "price": 10},
+    {"product": "banana", "price": 15},
+    {"product": "orange", "price": 20},
+]
+# 1. find the highest price
+most_expensive_fruit = max(groceries, key=lambda x: x["price"])
+print("most expensive fruit found:", most_expensive_fruit)
 
 
 ### CHALLENGE ###
 # C1. Word Count in a String:
 # Write a function to count the occurrence of each word in a given string. The function should return a dictionary where the keys are the unique words and the values are the word counts.
-def word_count(string):
+def word_count(words: str):
     # Your code here
-    pass
+    word_count = {}
+
+    # strategy
+    # 1. split the string by space: "Hello world Hello" -> ["Hello", "world", "Hello"]
+    print("current", words)
+    words_split = words.split()
+    print("after split", words_split)
+
+    # Example: ['Hello', 'world', 'Hello']
+    for w in words_split:
+        # if word_count[w] is None, meaning doesn't exist, add key-value pair w: 1 (first occurrence found)
+        if word_count.get(w) == None:
+            word_count[w] = 1
+        # else, get how many times the word's occurrence has been recorded, then add 1
+        else:
+            word_count[w] = word_count.get(w) + 1
+    return word_count
 
 
 # Test case 1
-test_string_1 = "Hello world! Hello."
+test_string_1 = "Hello world Hello"
 print(word_count(test_string_1))  # Expected output: {'hello': 2, 'world': 1}
 
+
 # Test case 2
-test_string_2 = "The quick brown fox jumps over the lazy dog."
+test_string_2 = "The quick brown fox jumps over the lazy dog"
 print(
     word_count(test_string_2)
 )  # Expected output: {'the': 2, 'quick': 1, 'brown': 1, 'fox': 1, 'jumps': 1, 'over': 1, 'lazy': 1, 'dog': 1}
 
 # Test case 3
-test_string_3 = "A man, a plan, a canal: Panama."
+test_string_3 = "A man a plan a canal Panama"
 print(
     word_count(test_string_3)
 )  # Expected output: {'a': 3, 'man': 1, 'plan': 1, 'canal': 1, 'panama': 1}
@@ -112,7 +148,8 @@ kendo_terms = {
 
 def invert_dict(d):
     # Your code here
-    pass
+    inv_map = {v: k for k, v in d.items()}
+    return inv_map
 
 
 # Test case for invert_dict
