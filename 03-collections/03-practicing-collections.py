@@ -163,7 +163,8 @@ print(invert_dict(baseball_terms))
 
 def merge_dicts(d1, d2):
     # Your code here
-    pass
+    d_merge = d1 | d2
+    return d_merge
 
 
 # Test case for merge_dicts
