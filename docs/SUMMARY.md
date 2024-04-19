@@ -4,4 +4,5 @@
 
 ## Python for Beginners
 
-* [Page 1](python-for-beginners/page-1.md)
+* [Topic 4](python-for-beginners/topic-4/README.md)
+  * [4.2 Scope](python-for-beginners/topic-4/4.2-scope.md)
