@@ -47,4 +47,4 @@ def find_average(li):
     return avg
 
 
-print(find_average([2, 4, 6, 8, 10, 12, 14]))
+print("average of 2, 4, 6, 8, 10, 12, 14:", find_average([2, 4, 6, 8, 10, 12, 14]))
